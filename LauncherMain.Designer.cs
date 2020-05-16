@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LauncherMain));
             this.mainText = new System.Windows.Forms.Label();
             this.launch = new System.Windows.Forms.Button();
             this.tab = new System.Windows.Forms.TabControl();
@@ -37,8 +38,6 @@
             this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.BBS = new System.Windows.Forms.TabPage();
             this.webBrowser3 = new System.Windows.Forms.WebBrowser();
-            this.widget = new System.Windows.Forms.TabPage();
-            this.webBrowser4 = new System.Windows.Forms.WebBrowser();
             this.KMC = new System.Windows.Forms.TabPage();
             this.webBrowser5 = new System.Windows.Forms.WebBrowser();
             this.setting = new System.Windows.Forms.TabPage();
@@ -52,20 +51,21 @@
             this.progress = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tab.SuspendLayout();
             this.Announcement.SuspendLayout();
             this.Update.SuspendLayout();
             this.BBS.SuspendLayout();
-            this.widget.SuspendLayout();
             this.KMC.SuspendLayout();
             this.setting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainText
             // 
             this.mainText.AutoSize = true;
             this.mainText.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.mainText.Location = new System.Drawing.Point(20, 14);
+            this.mainText.Location = new System.Drawing.Point(88, 14);
             this.mainText.Name = "mainText";
             this.mainText.Size = new System.Drawing.Size(234, 37);
             this.mainText.TabIndex = 0;
@@ -74,7 +74,7 @@
             // launch
             // 
             this.launch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.launch.Location = new System.Drawing.Point(523, 396);
+            this.launch.Location = new System.Drawing.Point(280, 456);
             this.launch.Name = "launch";
             this.launch.Size = new System.Drawing.Size(265, 45);
             this.launch.TabIndex = 1;
@@ -87,7 +87,6 @@
             this.tab.Controls.Add(this.Announcement);
             this.tab.Controls.Add(this.Update);
             this.tab.Controls.Add(this.BBS);
-            this.tab.Controls.Add(this.widget);
             this.tab.Controls.Add(this.KMC);
             this.tab.Controls.Add(this.setting);
             this.tab.Location = new System.Drawing.Point(21, 61);
@@ -158,26 +157,6 @@
             this.webBrowser3.Size = new System.Drawing.Size(759, 303);
             this.webBrowser3.TabIndex = 0;
             this.webBrowser3.Url = new System.Uri("http://clearsky.xyz/bbs.jsp", System.UriKind.Absolute);
-            // 
-            // widget
-            // 
-            this.widget.Controls.Add(this.webBrowser4);
-            this.widget.Location = new System.Drawing.Point(4, 22);
-            this.widget.Name = "widget";
-            this.widget.Size = new System.Drawing.Size(759, 303);
-            this.widget.TabIndex = 3;
-            this.widget.Text = "디스코드";
-            this.widget.UseVisualStyleBackColor = true;
-            // 
-            // webBrowser4
-            // 
-            this.webBrowser4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser4.Location = new System.Drawing.Point(0, 0);
-            this.webBrowser4.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser4.Name = "webBrowser4";
-            this.webBrowser4.Size = new System.Drawing.Size(759, 303);
-            this.webBrowser4.TabIndex = 0;
-            this.webBrowser4.Url = new System.Uri("http://namutree.ivyro.net/discord_wintchoco_w.html", System.UriKind.Absolute);
             // 
             // KMC
             // 
@@ -284,7 +263,7 @@
             // 
             this.progress.AutoSize = true;
             this.progress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            this.progress.Location = new System.Drawing.Point(12, 416);
+            this.progress.Location = new System.Drawing.Point(23, 393);
             this.progress.Name = "progress";
             this.progress.Size = new System.Drawing.Size(185, 24);
             this.progress.TabIndex = 3;
@@ -292,9 +271,9 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(16, 397);
+            this.progressBar1.Location = new System.Drawing.Point(16, 427);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(501, 23);
+            this.progressBar1.Size = new System.Drawing.Size(764, 23);
             this.progressBar1.TabIndex = 5;
             // 
             // button1
@@ -309,12 +288,24 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ClearSky_LauncherR1.Properties.Resources.server_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(612, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // LauncherMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 510);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.progress);
@@ -322,6 +313,7 @@
             this.Controls.Add(this.launch);
             this.Controls.Add(this.mainText);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LauncherMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClearSky";
@@ -330,10 +322,10 @@
             this.Announcement.ResumeLayout(false);
             this.Update.ResumeLayout(false);
             this.BBS.ResumeLayout(false);
-            this.widget.ResumeLayout(false);
             this.KMC.ResumeLayout(false);
             this.setting.ResumeLayout(false);
             this.setting.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -349,10 +341,8 @@
         private System.Windows.Forms.TabPage Update;
         private System.Windows.Forms.WebBrowser webBrowser2;
         private System.Windows.Forms.TabPage BBS;
-        private System.Windows.Forms.TabPage widget;
         private System.Windows.Forms.TabPage KMC;
         private System.Windows.Forms.WebBrowser webBrowser3;
-        private System.Windows.Forms.WebBrowser webBrowser4;
         private System.Windows.Forms.WebBrowser webBrowser5;
         private System.Windows.Forms.Label progress;
         private System.Windows.Forms.Button button1;
@@ -365,5 +355,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox screenSizeXText;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

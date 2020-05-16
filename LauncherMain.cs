@@ -25,6 +25,7 @@ namespace ClearSky_LauncherR1
 
         private void LauncherMain_Load(object sender, EventArgs e)
         {
+            mainText.Text = string.Format(mainText.Text, c.session.Username);
         }
 
         private void launch_Click(object sender, EventArgs e)
@@ -111,6 +112,11 @@ namespace ClearSky_LauncherR1
         private void Check_Tick(object sender, EventArgs e)
         {
             
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
